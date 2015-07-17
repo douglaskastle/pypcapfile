@@ -77,6 +77,9 @@ def payload_type(ethertype):
     if ethertype == 0x0800:
         from pcapfile.protocols.network.ip import IP
         return (IP, 'IPv4')
+    elif ethertype == 0x891d:
+        from pcapfile.protocols.network.tte import TTE
+        return (TTE, 'TTE')
 #    elif ethertype == 0x0806:
 #        from pcapfile.protocols.network.arp import ARP
 #        return (ARP, 'ARP')
